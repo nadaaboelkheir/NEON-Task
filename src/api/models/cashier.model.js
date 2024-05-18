@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 const CashierSchema = new mongoose.Schema({
 	userName: {
 		type: String,
@@ -18,4 +19,10 @@ const CashierSchema = new mongoose.Schema({
 	image: { type: String },
 });
 
+CashierSchema.pre('save', async function (next) {
+	if (this.isModified('password') || this.isNew) {
+		this.password = await bcrypt.hash(this.password, 10);
+	}
+	next();
+});
 module.exports = mongoose.model('Cashier', CashierSchema);

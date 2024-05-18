@@ -14,7 +14,7 @@ app.use(cors());
 
 app.use(express.json());
 
-// routes(app);
+routes(app);
 
 //end points
 app.use((req, res, next) => {
