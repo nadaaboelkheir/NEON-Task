@@ -13,13 +13,13 @@
 	},
 	"author": "nada aboelkheir",
 	"license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://nadaaboelkheir/NEON-Task.git"
-  },
+	"repository": {
+		"type": "git",
+		"url": "https://nadaaboelkheir/NEON-Task.git"
+	},
 	"dependencies": {
 		"aws-sdk": "^2.1416.0",
-		"bcrypt": "^5.1.0",
+		"bcrypt": "^5.1.1",
 		"cors": "^2.8.5",
 		"dotenv": "^16.3.1",
 		"express": "^4.18.2",
